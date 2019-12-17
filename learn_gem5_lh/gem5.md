@@ -37,7 +37,7 @@
 
 进入 gem5 目录，以 X86 为例介绍编译过程。
 
-1. 输入 `scons build/X86/gem5.opt` 进行编译。或者使用多线程 `scons build/X86/gem5.opt -j2` 加快编译速度。
+1. 输入 `scons build/X86/gem5.opt` 进行编译。或者使用多线程 `scons build/X86/gem5.opt -j4` 加快编译速度。
 2. 运行 gem5 自带的测试程序，输入 `build/X86/gem5.opt configs/example/se.py -c tests/test-progs/hello/bin/x86/linux/hello` 查看编译是否成功。
 
 **注意**：gem5 安装编译时间较长，为防止与服务器的连接意外断开，可使用 Screen 或 tmux。
