@@ -1,7 +1,6 @@
-## build/X86/gem5.opt configs/example/se.py --help
+## Options
 
 ```text
-Options:
   -h, --help            show this help message and exit
   -n NUM_CPUS, --num-cpus=NUM_CPUS
   --sys-voltage=SYS_VOLTAGE
@@ -211,4 +210,86 @@ Options:
                         filesystem for information or functionality. Instead
                         of finding files on the __HOST__ filesystem, the
                         process will find the user's replacment files.
+```
+
+## Memory
+
+```text
+HBM_1000_4H_1x128
+DRAMCtrl
+DDR3_2133_8x8
+HBM_1000_4H_1x64
+GDDR5_4000_2x32
+HMC_2500_1x32
+LPDDR3_1600_1x32
+WideIO_200_1x128
+QoSMemSinkCtrl
+DDR4_2400_8x8
+DDR3_1600_8x8
+DDR4_2400_4x16
+DDR4_2400_16x4
+SimpleMemory
+LPDDR2_S4_1066_1x32
+```
+
+## CPU
+
+```text
+AtomicSimpleCPU
+	Simple CPU model executing a configurable number of instructions per
+	cycle. This model uses the simplified 'atomic' memory mode.
+TraceCPU
+	Trace CPU model which replays traces generated in a prior simulation
+	using DerivO3CPU or its derived classes. It interfaces with L1
+	caches.
+DerivO3CPU
+MinorCPU
+NonCachingSimpleCPU
+	Simple CPU model based on the atomic CPU. Unlike the atomic CPU,
+	this model causes the memory system to bypass caches and is
+	therefore slightly faster in some cases. However, its main purpose
+	is as a substitute for hardware virtualized CPUs when stress-testing
+	the memory system.
+TimingSimpleCPU
+```
+
+## Branch Predictor
+
+```text
+MultiperspectivePerceptron8KB
+TAGE_SC_L_8KB
+LocalBP
+BiModeBP
+TAGE
+MultiperspectivePerceptron64KB
+MultiperspectivePerceptronTAGE8KB
+TAGE_SC_L_64KB
+TournamentBP
+LTAGE
+MultiperspectivePerceptronTAGE64KB
+```
+
+## Indirect Branch Predictor
+
+```text
+SimpleIndirectPredictor
+```
+
+## Hardware Prefetcher
+
+```text
+TaggedPrefetcher
+BOPPrefetcher
+STeMSPrefetcher
+IrregularStreamBufferPrefetcher
+DCPTPrefetcher
+MultiPrefetcher
+SBOOEPrefetcher
+IndirectMemoryPrefetcher
+SignaturePathPrefetcher
+SignaturePathPrefetcherV2
+PIFPrefetcher
+SlimAMPMPrefetcher
+AMPMPrefetcher
+StridePrefetcher
 ```
