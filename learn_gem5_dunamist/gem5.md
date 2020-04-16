@@ -8,7 +8,7 @@
 2. SCons
     > `sudo apt install scons`
 
-3. SWIG
+3. SWIG 
     > `sudo apt install swig`
 
 4. zlib
